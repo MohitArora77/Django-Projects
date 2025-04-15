@@ -1,1 +1,1 @@
-All Django Project 
+Django Projects
