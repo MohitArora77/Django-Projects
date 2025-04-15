@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css'%}">
+</head>
+<body>
+    <center>
+        <h1>TODAY'S HOT TOPICS</h1>
+    </center>
+    {%if all_articles%}
+    {%for i in all_articles%}
+    <section class="card">
+    <br/>
+    <h2>{{i.title}}</h2><br/>
+    <p>{{i.desc|truncatechars:20}}</p><br/>
+    <a href="{%url 'specific' i.id %}"><button>READ MORE</button></a><br/><br/>
+    </section>
+    {%endfor%}
+    {%else%}
+    <h2>NO Articles Avaiable....</h2>
+    {% endif %}
+</body>
+</html>

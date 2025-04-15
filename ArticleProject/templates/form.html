@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border:2px solid black;
+            width:400px;
+            margin:120px auto;
+            padding:20px;
+        }
+        a{
+            text-decoration:none ;
+            color:black;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <form action="" method="POST">
+        {%csrf_token%}
+        <label name="Title">Title</label>
+        <input type="text" name="Title" id="Title"><br/><br/>
+        <label name="Description">Description</label><br/>
+        <textarea name="Description" id="Description"></textarea><br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+    <center>
+        <button><a href="{%url 'articles'%}">All Feedback</a></button>
+    </center>
+</body>
+</html>

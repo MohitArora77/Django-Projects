@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border:2px solid black;
+        padding:60px;
+        width: 80%;
+        height: 200px;
+    }
+    tbody td{
+        padding:30px;
+    } 
+</style>
+<body>
+    {% if all_feedbacks %}
+    <table rules=all>
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>FeedBack</th>
+            </tr>
+        </thead>
+    {%for i in all_feedbacks%}
+        <tbody>
+            <tr>
+                <td>{{i.Firstname}}</td>
+                <td>{{i.Lastname}}</td>
+                <td>{{i.Feedback}}</td>
+            </tr>
+        </tbody>
+    {%endfor%}
+    </table>
+    <center>
+        <a href="{%url 'form'%}">
+            <button>FORM</button></a>
+    </center>
+    {%else%}
+    <h1>No data Available...</h1>
+    <center>
+        <a href="{%url 'form'%}">
+            <button>NEW FORM</button>
+        </a>
+    </center>
+    {%endif%}
+</body>
+</html>

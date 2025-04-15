@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>football</title>
+</head>
+<body>
+    {%extends 'index.html'%}
+    {%block main%}
+    <button type="button"><a href="http://127.0.0.1:8000/">HOME</a></button>
+    <button type="button"><a href="{% url 'cricket' %}">CRICKET</a></button>
+    <button type="button"><a href="{% url 'hockey' %}">HOCKEY</a></button>
+   <center><h1>football</h1></center>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo odit nulla quisquam dignissimos, alias tempora architecto delectus maxime amet rem assumenda, deserunt error aliquam, itaque impedit corporis iure! Ab incidunt ipsum, tempora quam quia accusantium necessitatibus nisi fugiat accusamus consectetur placeat nobis facere, a ea dolores cupiditate aspernatur vero doloremque? Sint blanditiis obcaecati, temporibus cum consequuntur at. Est quam suscipit, nihil nisi veniam repudiandae facilis debitis ratione maxime atque nam necessitatibus dolorum excepturi a deserunt eius magnam adipisci in, voluptatum eligendi corporis. Vel consequatur pariatur porro optio qui soluta ab unde illo modi iure quae, amet excepturi repudiandae vero necessitatibus.</p>
+    {%endblock%}
+    {%block football%}
+    {%endblock%}
+</body>
+</html>

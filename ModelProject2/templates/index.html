@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student info</title>
+</head>
+<style>
+    body{
+        border:2px solid white;
+        margin:130px;
+    }
+    table{
+        width:100%;
+        border:2px solid black;
+    }
+    tr th {
+        padding:10px;
+        background-color: rgb(128, 128, 128);
+    }
+    tr td{
+        padding:10px;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <h1><center>EMPLOYEE INFORMATION</center></h1>
+    {% if emp_data%}
+    {%block second%}
+    <table border="1" rules="all">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Eid</th>
+                <th>Company</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>email</th>
+                <th>city</th>
+                <th>address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in emp_data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.ename}}</td>
+                <td>{{i.eid}}</td>
+                <td>{{i.company}}</td>
+                <td>{{i.job}}</td>
+                <td>{{i.esal}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.addr}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    {%endblock%}
+    {%else%}
+    <h1>No Data Available...</h1>
+    {%block main%}
+    {%endblock%}
+
+{%endif%}
+
+</body>
+</html>

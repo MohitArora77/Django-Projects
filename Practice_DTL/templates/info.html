@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Current Time is :<span style="color:red">{{data}}</span> </h1>
+    <h2>Student Information</h2>
+    <h3>Student Name : <span style="color:rgb(0, 13, 255)"> {{name}}</span></h3>
+    <h3>Roll no : <span style="color:rgb(13, 0, 255)"> {{rollno}}</span></h3>
+    <h3>Mocking Rating : <span style="color:rgb(0, 55, 255)"> {{rating}}</span></h3>
+
+    <!-- For loop structure-->
+     {% for i in list1 %}
+       <h2>Sports :{{i.sports}}</h2><hr/>
+       <h2>Player :{{i.name}}</h2><hr/>
+       <h2>jersy :{{i.Jersy}}</h2><hr/>
+     {% endfor %}
+</body>
+</html>

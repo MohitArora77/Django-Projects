@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %} <!--Django static tag-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> <!--Django static tag-->
+    <!-- Configure -->
+
+</head>
+<body>
+    <h1 id="head"> WELCOME TO ASTROTALK</h1><hr/>
+    <h1>Current Time : {{time}}</h1>
+    <h1>Greet : {{Greet}}</h1>
+    <h1>Name : {{name}}</h1>
+    <h1>Candidate_Name :{{candidate}}</h1>
+    <h1>message :{{msg}}</h1>
+   
+    <!-- To add Image in Django -->
+     <!-- <img src="{% static 'astro.jpg'%}" alt="Astrology"/> -->
+</body>
+</html>

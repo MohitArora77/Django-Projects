@@ -1,0 +1,38 @@
+*,::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+section{
+    width: 500px;
+    margin: 120px auto;
+    background-color: blueviolet;
+}
+.form{
+    width: 80px;
+    padding:10px;
+    margin-left: 40px;
+}
+section:hover{
+    box-shadow: 0px 0px 10px black;
+}
+label{
+    font-size: larger;
+    font-weight: 900;
+}
+input{
+    padding:5px;
+    border: 2px solid black;
+}
+.text{
+    padding: 5px;
+    border: 2px solid black;
+}

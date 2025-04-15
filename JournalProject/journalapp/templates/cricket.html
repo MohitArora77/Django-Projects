@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket</title>
+</head>
+<body>
+    {%extends 'index.html'%}
+    {%block main%}
+    <button type="button"><a href="http://127.0.0.1:8000/">HOME</a></button>
+    <button type="button"><a href="{% url 'football' %}">FOOTBALL</a></button>
+    <button type="button"><a href="{% url 'hockey' %}">HOCKEY</a></button>
+    <center><h1>Cricket</h1></center>
+    <h1>Veterans of cricket....</h1>
+    {%for i in cricket%}
+        <h1>{{i.name}}</h1>
+        <p>{{i.details}}</p>
+    {%endfor%}
+
+    {%endblock%}
+  
+</body>
+
+</html>

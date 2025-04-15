@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <h1> Today {{type}} News :</h1>
+    <ul>
+
+       <li><h2>{{msg1}}</h2></li> 
+        <li><h3>{{msg2}}</h3></li>
+    </ul>
+
+    {% if type == 'business' %}
+    <img src="{% static 'images/images/business1.jpg'%}" alt="">
+    <img src="{% static 'images/images/business2.jpeg'%}" alt="">
+    <img src="{% static 'images/images/business3.webp'%}" alt="">
+    {%elif type == 'movies' %}
+    <img src="{% static 'images/images/movies1.jpg'%}" alt="">
+    <img src="{% static 'images/images/movies2.jpg'%}" alt="">
+    <img src="{% static 'images/images/movies2.jpg'%}" alt="">
+    {%elif type == 'sports' %}
+    <img src="{% static 'images/images/sports1.jpg'%}" alt="">
+    <img src="{% static 'images/images/sports2.jpg'%}" alt="">
+    <img src="{% static 'images/images/sports3.webp'%}" alt="">
+    {% else %}
+    <p> Sorry!! No News Available... </p>
+    {% endif %}
+</body>
+
+</html>

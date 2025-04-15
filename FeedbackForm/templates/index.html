@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+
+<body>
+    {%if submitted %}
+     <h1>Form is Submitted!!</h1>
+    {%else%}
+      <h1 class="head"><center>The FeedBack Form</center></h1>
+      <form action="" class="form" method="POST">
+        {% csrf_token %} 
+        <label for="Firstname">Firstname</label>
+        <input type="text" id="Firstname" name="Firstname"><br/><br/>
+        <label for="Lastname">Lastname</label>
+        <input type="text" id="Lastname" name="Lastname">
+        <br/><br/>
+        <label for="Feedback">Feedback</label><br/><br/>
+        <textarea name="Feedback" id="feed"></textarea>
+        <br/><br/>
+        <a href=#><center><button type="submit">Submit</button></center></a>
+    </form>
+    {%endif%}
+      <h1>{{submitted}}</h1>
+      <center>
+        <a href="{%url 'feedbacks'%}">
+            <button>ALL FEEDBACKS</button></a>
+    </center>
+
+</body>
+</html>

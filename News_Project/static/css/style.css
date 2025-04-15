@@ -1,0 +1,33 @@
+*,::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(yellow,yellow,red)
+}
+
+h1{
+    text-decoration: underline;
+    text-align: center;
+    font-size:50px;
+}
+.list {
+ gap:20px;
+}
+.list li{
+    padding:15px;
+}
+
+img{
+    display:inline-block;
+    width:400px;
+    height:300px;
+    padding:20px;
+}

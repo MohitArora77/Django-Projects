@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center><h1>This is Student Info Page</h1></center>
+    <hr />
+    {% if student_data%}
+    <center>
+      <table border="3" rules="all">
+          <thead>
+              <td>Name</td>
+              <td>Rollno</td>
+              <td>Phno</td>
+              <td>Addr</td> 
+            </thead>
+        <tbody>
+          {% for i in student_data%}
+          <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.rollno}}</td>
+            <td>{{i.phno}}</td>
+            <td>{{i.addr}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </center>
+    {%else%}
+    <h1>No Data Available..</h1>
+    {%endif%}
+  </body>
+</html>
